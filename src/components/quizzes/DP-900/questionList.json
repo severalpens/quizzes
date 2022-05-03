@@ -88,4 +88,44 @@
         { "text": "Enable the Hierarchical Namespace option of an Azure Storage Account", "isCorrect": true }
       ]
     }
+    ,{
+      "text": "Which data analytics category describes 'what has happened'?",
+      "options": [
+        { "text": "Descriptive", "isCorrect": true },
+        { "text": "Diagnostic", "isCorrect": false },
+        { "text": "Predictive", "isCorrect": false },
+        { "text": "Prescriptive", "isCorrect": false },
+        { "text": "Cognitive", "isCorrect": false }
+      ]
+    }
+    ,{
+      "text": "Which data analytics category describes prescriptive Analytics?",
+      "options": [
+        { "text": "What happened", "isCorrect": false },
+        { "text": "Why did it happen", "isCorrect": false },
+        { "text": "What will happen (neural networks, decision trees)", "isCorrect": false },
+        { "text": "How can we make it happen (ML)", "isCorrect": true },
+        { "text": "Cognitive (AI)", "isCorrect": false }
+      ]
+    }
+    ,{
+      "text": "What properties of database transaction ensure it can guarantee data validity?",
+      "options": [
+        { "text": "Atomicity, Consistency, Integrity, Dependability", "isCorrect": false },
+        { "text": "Atomicity, Consistency, Isolation, Durability", "isCorrect": true },
+        { "text": "Atomicity, Consistency, Isolation, Dependability", "isCorrect": false },
+        { "text": "Atomicity, Consistency, Independent, Durability", "isCorrect": false },
+        { "text": "Automated, Consistency, Integrity, Dependability", "isCorrect": false }
+      ]
+}
+,{
+  "text": "What is Azure Synapse?",
+  "options": [
+    { "text": "Data warehouse and unified analytics platform", "isCorrect": true },
+    { "text": "Semi-structured data store", "isCorrect": false },
+    { "text": "PAAS service for ML", "isCorrect": false },
+    { "text": "Big data analytics service", "isCorrect": false },
+    { "text": "Cognitive analytics in Azure Data Storage", "isCorrect": false }
   ]
+}
+]

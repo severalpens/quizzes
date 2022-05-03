@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
 import Questions from './components/quizzes/DP-900/Questions.jsx';
+import QuestionsContainer from './components/quizzes/DP-900/QuestionsContainer';
 
 
 const root = createRoot(
@@ -17,7 +18,7 @@ root.render(
   <BrowserRouter>
   <Routes>
   <Route path="/" element={<App />}>
-  <Route path="/azure/questions" element={<Questions/>}/>
+  <Route path="/azure/questions" element={<QuestionsContainer/>}/>
       <Route
         path="*"
         element={

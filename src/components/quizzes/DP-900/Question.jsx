@@ -9,16 +9,16 @@ export default class Question extends Component {
     this.state = { answered: false, correctly: false }
   }
 
-  getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
 
   render() {
-    const { questionId, question, check } = this.props;
+    const { questionId, question, check, optionIds } = this.props;
     const options = question.options;
-    const randomNumberPairs = options.map((o,i) => { return {orig: i, rand: this.getRandomInt(100000)}});
-    const sorted = randomNumberPairs.sort((a,b) => a.rand - b.rand);
-    let renderedOptions = sorted.map((pair) => <Option key={pair.orig} questionId={questionId} optionId={pair.orig} option={options[pair.orig]} />)
+    let renderedOptions = optionIds.map((pair,i) => <Option key={i} questionId={questionId} optionId={pair.originalId} option={options[pair.originalId]} />)
+
+    const getAnswer = () => {
+      let option = question.options.find((x) => x.isCorrect === true);
+      return option.text;
+    }
 
     return (
       <div className="mb-16">
@@ -28,7 +28,7 @@ export default class Question extends Component {
         <button type="submit" className="border text-xs m-4  px-4 py-1.5  rounded-md bg-blue-600 text-white"
           onClick={e => {
             e.preventDefault();
-            check(questionId);
+            check(questionId, getAnswer());
           }}>Check</button>
       </div>
     )
